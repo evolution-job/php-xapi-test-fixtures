@@ -4,14 +4,14 @@ CHANGELOG
 1.2.0
 -----
 
-* dropped support for PHP < 7.1
+* Dropped support for PHP < 8.1
 
 1.1.0
 -----
 
-* made the package compatible with `3.x` releases of `ramsey/uuid`
-* allow `2.x` releases of the `php-xapi/model` package too
-* allow `3.x` releases of the `php-xapi/model` package too
+* Made the package compatible with `3.x` releases of `ramsey/uuid`
+* Allow `2.x` releases of the `php-xapi/model` package too
+* Allow `3.x` releases of the `php-xapi/model` package too
 
 1.0.1
 -----

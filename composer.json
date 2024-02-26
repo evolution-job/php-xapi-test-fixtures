@@ -11,10 +11,16 @@
             "homepage": "https://github.com/xabbuh"
         }
     ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/evolution-job/php-xapi-model.git"
+        }
+    ],
     "require": {
-        "php": "^7.1",
-        "php-xapi/model": "^1.1 || ^2.0 || ^3.0",
-        "ramsey/uuid": "^2.9 || ^3.0"
+        "php": "^8.1",
+        "php-xapi/model": "^3.3",
+        "ramsey/uuid": "^3.0 || ^4.0"
     },
     "conflict": {
         "xabbuh/xapi-data-fixtures": "*"
