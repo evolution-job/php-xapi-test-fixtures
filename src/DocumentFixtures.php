@@ -32,35 +32,30 @@ class DocumentFixtures
 {
     /**
      * Loads empty document data.
-     *
-     * @return DocumentData
      */
-    public static function getEmptyDocumentData()
+    public static function getEmptyDocumentData(): DocumentData
     {
         return new DocumentData();
     }
 
     /**
      * Loads document data.
-     *
-     * @return DocumentData
      */
-    public static function getDocumentData()
+    public static function getDocumentData(): DocumentData
     {
-        return new DocumentData(array('x' => 'foo', 'y' => 'bar'));
+        return new DocumentData(['x' => 'foo', 'y' => 'bar']);
     }
 
     /**
      * Loads an activity profile document.
      *
-     * @param DocumentData $documentData The document data, by default, a some
+     * @param DocumentData|null $documentData The document data, by default, a some
      *                                   default data will be used
-     *
      * @return ActivityProfileDocument
      */
-    public static function getActivityProfileDocument(DocumentData $documentData = null)
+    public static function getActivityProfileDocument(?DocumentData $documentData = null): ActivityProfileDocument
     {
-        if (null === $documentData) {
+        if (!$documentData instanceof DocumentData) {
             $documentData = static::getDocumentData();
         }
 
@@ -72,14 +67,13 @@ class DocumentFixtures
     /**
      * Loads an agent profile document.
      *
-     * @param DocumentData $documentData The document data, by default, a some
+     * @param DocumentData|null $documentData The document data, by default, a some
      *                                   default data will be used
-     *
      * @return AgentProfileDocument
      */
-    public static function getAgentProfileDocument(DocumentData $documentData = null)
+    public static function getAgentProfileDocument(?DocumentData $documentData = null): AgentProfileDocument
     {
-        if (null === $documentData) {
+        if (!$documentData instanceof DocumentData) {
             $documentData = static::getDocumentData();
         }
 
@@ -89,14 +83,13 @@ class DocumentFixtures
     /**
      * Loads a state document.
      *
-     * @param DocumentData $documentData The document data, by default, a some
+     * @param DocumentData|null $documentData The document data, by default, a some
      *                                   default data will be used
-     *
      * @return StateDocument
      */
-    public static function getStateDocument(DocumentData $documentData = null)
+    public static function getStateDocument(?DocumentData $documentData = null): StateDocument
     {
-        if (null === $documentData) {
+        if (!$documentData instanceof DocumentData) {
             $documentData = static::getDocumentData();
         }
 

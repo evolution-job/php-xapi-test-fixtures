@@ -21,112 +21,112 @@ use Xabbuh\XApi\Model\SubStatement;
  */
 class SubStatementFixtures
 {
-    public static function getTypicalSubStatement()
+    public static function getTypicalSubStatement(): SubStatement
     {
         return new SubStatement(ActorFixtures::getTypicalAgent(), VerbFixtures::getTypicalVerb(), ActivityFixtures::getTypicalActivity());
     }
 
-    public static function getSubStatementWithMboxAgent()
+    public static function getSubStatementWithMboxAgent(): SubStatement
     {
         return new SubStatement(ActorFixtures::getMboxAgent(), VerbFixtures::getTypicalVerb(), ActivityFixtures::getTypicalActivity());
     }
 
-    public static function getSubStatementWithMboxSha1SumAgent()
+    public static function getSubStatementWithMboxSha1SumAgent(): SubStatement
     {
         return new SubStatement(ActorFixtures::getMboxSha1SumAgent(), VerbFixtures::getTypicalVerb(), ActivityFixtures::getTypicalActivity());
     }
 
-    public static function getSubStatementWithOpenIdAgent()
+    public static function getSubStatementWithOpenIdAgent(): SubStatement
     {
         return new SubStatement(ActorFixtures::getOpenIdAgent(), VerbFixtures::getTypicalVerb(), ActivityFixtures::getTypicalActivity());
     }
 
-    public static function getSubStatementWithAccountAgent()
+    public static function getSubStatementWithAccountAgent(): SubStatement
     {
         return new SubStatement(ActorFixtures::getAccountAgent(), VerbFixtures::getTypicalVerb(), ActivityFixtures::getTypicalActivity());
     }
 
-    public static function getSubStatementWithMboxGroup()
+    public static function getSubStatementWithMboxGroup(): SubStatement
     {
         return new SubStatement(ActorFixtures::getMboxGroup(), VerbFixtures::getTypicalVerb(), ActivityFixtures::getTypicalActivity());
     }
 
-    public static function getSubStatementWithMboxSha1SumGroup()
+    public static function getSubStatementWithMboxSha1SumGroup(): SubStatement
     {
         return new SubStatement(ActorFixtures::getMboxSha1SumGroup(), VerbFixtures::getTypicalVerb(), ActivityFixtures::getTypicalActivity());
     }
 
-    public static function getSubStatementWithOpenIdGroup()
+    public static function getSubStatementWithOpenIdGroup(): SubStatement
     {
         return new SubStatement(ActorFixtures::getOpenIdGroup(), VerbFixtures::getTypicalVerb(), ActivityFixtures::getTypicalActivity());
     }
 
-    public static function getSubStatementWithAccountGroup()
+    public static function getSubStatementWithAccountGroup(): SubStatement
     {
         return new SubStatement(ActorFixtures::getAccountGroup(), VerbFixtures::getTypicalVerb(), ActivityFixtures::getTypicalActivity());
     }
 
-    public static function getSubStatementWithIdOnlyVerb()
+    public static function getSubStatementWithIdOnlyVerb(): SubStatement
     {
         return new SubStatement(ActorFixtures::getTypicalAgent(), VerbFixtures::getIdVerb(), ActivityFixtures::getTypicalActivity());
     }
 
-    public static function getSubStatementWithMboxAgentObject()
+    public static function getSubStatementWithMboxAgentObject(): SubStatement
     {
         return new SubStatement(ActorFixtures::getTypicalAgent(), VerbFixtures::getTypicalVerb(), ActorFixtures::getMboxAgent());
     }
 
-    public static function getSubStatementWithMboxSha1SumAgentObject()
+    public static function getSubStatementWithMboxSha1SumAgentObject(): SubStatement
     {
         return new SubStatement(ActorFixtures::getTypicalAgent(), VerbFixtures::getTypicalVerb(), ActorFixtures::getMboxSha1SumAgent());
     }
 
-    public static function getSubStatementWithOpenIdAgentObject()
+    public static function getSubStatementWithOpenIdAgentObject(): SubStatement
     {
         return new SubStatement(ActorFixtures::getTypicalAgent(), VerbFixtures::getTypicalVerb(), ActorFixtures::getOpenIdAgent());
     }
 
-    public static function getSubStatementWithAccountAgentObject()
+    public static function getSubStatementWithAccountAgentObject(): SubStatement
     {
         return new SubStatement(ActorFixtures::getTypicalAgent(), VerbFixtures::getTypicalVerb(), ActorFixtures::getAccountAgent());
     }
 
-    public static function getSubStatementWithMboxGroupObject()
+    public static function getSubStatementWithMboxGroupObject(): SubStatement
     {
         return new SubStatement(ActorFixtures::getTypicalAgent(), VerbFixtures::getTypicalVerb(), ActorFixtures::getMboxGroup());
     }
 
-    public static function getSubStatementWithMboxSha1SumGroupObject()
+    public static function getSubStatementWithMboxSha1SumGroupObject(): SubStatement
     {
         return new SubStatement(ActorFixtures::getTypicalAgent(), VerbFixtures::getTypicalVerb(), ActorFixtures::getMboxSha1SumGroup());
     }
 
-    public static function getSubStatementWithOpenIdGroupObject()
+    public static function getSubStatementWithOpenIdGroupObject(): SubStatement
     {
         return new SubStatement(ActorFixtures::getTypicalAgent(), VerbFixtures::getTypicalVerb(), ActorFixtures::getOpenIdGroup());
     }
 
-    public static function getSubStatementWithAccountGroupObject()
+    public static function getSubStatementWithAccountGroupObject(): SubStatement
     {
         return new SubStatement(ActorFixtures::getTypicalAgent(), VerbFixtures::getTypicalVerb(), ActorFixtures::getAccountGroup());
     }
 
-    public static function getSubStatementWithAllPropertiesAndTypicalAgentMemberGroupObject()
+    public static function getSubStatementWithAllPropertiesAndTypicalAgentMemberGroupObject(): SubStatement
     {
         return new SubStatement(ActorFixtures::getTypicalAgent(), VerbFixtures::getTypicalVerb(), ActorFixtures::getAllPropertiesAndTypicalAgentMemberGroup());
     }
 
-    public static function getSubStatementWithAllPropertiesActivityObject()
+    public static function getSubStatementWithAllPropertiesActivityObject(): SubStatement
     {
         return new SubStatement(ActorFixtures::getTypicalAgent(), VerbFixtures::getTypicalVerb(), ActivityFixtures::getAllPropertiesActivity());
     }
 
-    public static function getSubStatementWithTypicalStatementReferenceObject()
+    public static function getSubStatementWithTypicalStatementReferenceObject(): SubStatement
     {
         return new SubStatement(ActorFixtures::getTypicalAgent(), VerbFixtures::getTypicalVerb(), StatementReferenceFixtures::getTypicalStatementReference());
     }
 
-    public static function getAllPropertiesSubStatement()
+    public static function getAllPropertiesSubStatement(): SubStatement
     {
         return new SubStatement(ActorFixtures::getTypicalAgent(), VerbFixtures::getTypicalVerb(), ActivityFixtures::getTypicalActivity(), ResultFixtures::getTypicalResult(), ContextFixtures::getTypicalContext());
     }

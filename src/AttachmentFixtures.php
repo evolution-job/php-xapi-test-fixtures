@@ -24,42 +24,42 @@ use Xabbuh\XApi\Model\LanguageMap;
  */
 class AttachmentFixtures
 {
-    public static function getTextAttachment()
+    public static function getTextAttachment(): Attachment
     {
         return new Attachment(
             IRI::fromString('http://id.tincanapi.com/attachment/supporting_media'),
             'text/plain',
             18,
             'bd1a58265d96a3d1981710dab8b1e1ed04a8d7557ea53ab0cf7b44c04fd01545',
-            LanguageMap::create(array('en-US' => 'Text attachment')),
+            LanguageMap::create(['en-US' => 'Text attachment']),
             null,
             null,
             'some text content'
         );
     }
 
-    public static function getJSONAttachment()
+    public static function getJSONAttachment(): Attachment
     {
         return new Attachment(
             IRI::fromString('http://id.tincanapi.com/attachment/supporting_media'),
             'application/json',
             60,
             'f4135c31e2710764604195dfe4e225884d8108467cc21670803e384b80df88ee',
-            LanguageMap::create(array('en-US' => 'JSON attachment')),
+            LanguageMap::create(['en-US' => 'JSON attachment']),
             null,
             null,
             '{"propertyA":"value1","propertyB":"value2","propertyC":true}'
         );
     }
 
-    public static function getFileUrlOnlyAttachment()
+    public static function getFileUrlOnlyAttachment(): Attachment
     {
         return new Attachment(
             IRI::fromString('http://id.tincanapi.com/attachment/supporting_media'),
             'application/octet-stream',
             65556,
             'd14f1580a2cebb6f8d4a8a2fc0d13c67f970e84f8d15677a93ae95c9080df899',
-            LanguageMap::create(array('en-US' => 'FileUrl Only attachment')),
+            LanguageMap::create(['en-US' => 'FileUrl Only attachment']),
             null,
             IRL::fromString('http://tincanapi.com/conformancetest/attachment/fileUrlOnly')
         );

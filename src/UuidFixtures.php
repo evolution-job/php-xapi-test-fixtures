@@ -12,7 +12,6 @@
 namespace Xabbuh\XApi\DataFixtures;
 
 use Ramsey\Uuid\Uuid as RamseyUuid;
-use Rhumsaa\Uuid\Uuid as RhumsaaUuid;
 
 /**
  * xAPI UUID fixtures.
@@ -22,22 +21,18 @@ use Rhumsaa\Uuid\Uuid as RhumsaaUuid;
  */
 class UuidFixtures
 {
-    public static function getGoodUuid()
+    public static function getGoodUuid(): string
     {
         return '39e24cc4-69af-4b01-a824-1fdc6ea8a3af';
     }
 
-    public static function getBadUuid()
+    public static function getBadUuid(): string
     {
         return 'bad-uuid';
     }
 
-    public static function getUniqueUuid()
+    public static function getUniqueUuid(): string
     {
-        if (class_exists('Rhumsaa\Uuid\Uuid')) {
-            return (string) RhumsaaUuid::uuid4();
-        }
-
-        return (string) RamseyUuid::uuid4();
+        return (string)RamseyUuid::uuid4();
     }
 }

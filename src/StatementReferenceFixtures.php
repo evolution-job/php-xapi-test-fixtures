@@ -22,12 +22,12 @@ use Xabbuh\XApi\Model\StatementReference;
  */
 class StatementReferenceFixtures
 {
-    public static function getTypicalStatementReference()
+    public static function getTypicalStatementReference(): StatementReference
     {
         return new StatementReference(StatementId::fromString('16fd2706-8baf-433b-82eb-8c7fada847da'));
     }
 
-    public static function getAllPropertiesStatementReference()
+    public static function getAllPropertiesStatementReference(): StatementReference
     {
         return new StatementReference(StatementId::fromString('16fd2706-8baf-433b-82eb-8c7fada847da'));
     }

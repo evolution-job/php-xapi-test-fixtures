@@ -22,22 +22,22 @@ use Xabbuh\XApi\Model\IRL;
  */
 class AccountFixtures
 {
-    public static function getTypicalAccount()
+    public static function getTypicalAccount(): Account
     {
         return new Account('test', IRL::fromString('https://tincanapi.com'));
     }
 
-    public static function getConsumerAccount()
+    public static function getConsumerAccount(): Account
     {
         return new Account('oauth_consumer_x75db', IRL::fromString('https://tincanapi.com/OAuth/Token'));
     }
 
-    public static function getAllPropertiesAccount()
+    public static function getAllPropertiesAccount(): Account
     {
         return new Account('test', IRL::fromString('https://tincanapi.com'));
     }
 
-    public static function getForQueryAccount()
+    public static function getForQueryAccount(): Account
     {
         return new Account('forQuery', IRL::fromString('https://tincanapi.com'));
     }

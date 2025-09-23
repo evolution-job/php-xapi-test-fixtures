@@ -1,6 +1,13 @@
 CHANGELOG
 =========
 
+1.3.0
+-----
+
+* Dropped support for PHP < 8.4
+* Made the package compatible with `4.x` releases of `ramsey/uuid`
+* Add `StateFixtures`
+
 1.2.0
 -----
 

@@ -12,19 +12,18 @@
 namespace Xabbuh\XApi\DataFixtures;
 
 use Xabbuh\XApi\Model\Definition;
-use Xabbuh\XApi\Model\Extensions;
 use Xabbuh\XApi\Model\Interaction\ChoiceInteractionDefinition;
+use Xabbuh\XApi\Model\Interaction\FillInInteractionDefinition;
 use Xabbuh\XApi\Model\Interaction\LikertInteractionDefinition;
 use Xabbuh\XApi\Model\Interaction\MatchingInteractionDefinition;
+use Xabbuh\XApi\Model\Interaction\NumericInteractionDefinition;
+use Xabbuh\XApi\Model\Interaction\OtherInteractionDefinition;
 use Xabbuh\XApi\Model\Interaction\PerformanceInteractionDefinition;
 use Xabbuh\XApi\Model\Interaction\SequencingInteractionDefinition;
+use Xabbuh\XApi\Model\Interaction\TrueFalseInteractionDefinition;
 use Xabbuh\XApi\Model\IRI;
 use Xabbuh\XApi\Model\IRL;
 use Xabbuh\XApi\Model\LanguageMap;
-use Xabbuh\XApi\Model\Interaction\FillInInteractionDefinition;
-use Xabbuh\XApi\Model\Interaction\NumericInteractionDefinition;
-use Xabbuh\XApi\Model\Interaction\OtherInteractionDefinition;
-use Xabbuh\XApi\Model\Interaction\TrueFalseInteractionDefinition;
 
 /**
  * xAPI activity definition fixtures.
@@ -34,134 +33,112 @@ use Xabbuh\XApi\Model\Interaction\TrueFalseInteractionDefinition;
  */
 class DefinitionFixtures
 {
-    public static function getEmptyDefinition()
+    public static function getEmptyDefinition(): Definition
     {
         return new Definition();
     }
 
-    public static function getTypicalDefinition()
+    public static function getTypicalDefinition(): Definition
     {
         return new Definition();
     }
 
-    public static function getNameDefinition()
+    public static function getNameDefinition(): Definition
     {
-        return new Definition(LanguageMap::create(array('en-US' => 'test')));
+        return new Definition(LanguageMap::create(['en-US' => 'test']));
     }
 
-    public static function getDescriptionDefinition()
+    public static function getDescriptionDefinition(): Definition
     {
-        return new Definition(null, LanguageMap::create(array('en-US' => 'test')));
+        return new Definition(null, LanguageMap::create(['en-US' => 'test']));
     }
 
-    public static function getTypeDefinition()
+    public static function getTypeDefinition(): Definition
     {
         return new Definition(null, null, IRI::fromString('http://id.tincanapi.com/activitytype/unit-test'));
     }
 
-    public static function getMoreInfoDefinition()
+    public static function getMoreInfoDefinition(): Definition
     {
         return new Definition(null, null, null, IRL::fromString('https://github.com/adlnet/xAPI_LRS_Test'));
     }
 
-    public static function getExtensionsDefinition()
+    public static function getExtensionsDefinition(): Definition
     {
-        $definition = new Definition();
-        $definition = $definition->withExtensions(ExtensionsFixtures::getMultiplePairsExtensions());
-
-        return $definition;
+        return new Definition()->withExtensions(ExtensionsFixtures::getMultiplePairsExtensions());
     }
 
-    public static function getEmptyExtensionsDefinition()
+    public static function getEmptyExtensionsDefinition(): Definition
     {
-        $definition = new Definition();
-        $definition = $definition->withExtensions(ExtensionsFixtures::getEmptyExtensions());
-
-        return $definition;
+        return new Definition()->withExtensions(ExtensionsFixtures::getEmptyExtensions());
     }
 
-    public static function getAllPropertiesDefinition()
+    public static function getAllPropertiesDefinition(): Definition
     {
         return new Definition(
-            LanguageMap::create(array('en-US' => 'test')),
-            LanguageMap::create(array('en-US' => 'test')),
+            LanguageMap::create(['en-US' => 'test']),
+            LanguageMap::create(['en-US' => 'test']),
             IRI::fromString('http://id.tincanapi.com/activitytype/unit-test'),
             IRL::fromString('https://github.com/adlnet/xAPI_LRS_Test'),
             ExtensionsFixtures::getTypicalExtensions()
         );
     }
 
-    public static function getTrueFalseDefinition()
+    public static function getTrueFalseDefinition(): TrueFalseInteractionDefinition
     {
         return new TrueFalseInteractionDefinition();
     }
 
-    public static function getFillInDefinition()
+    public static function getFillInDefinition(): FillInInteractionDefinition
     {
         return new FillInInteractionDefinition();
     }
 
-    public static function getNumericDefinition()
+    public static function getNumericDefinition(): NumericInteractionDefinition
     {
         return new NumericInteractionDefinition();
     }
 
-    public static function getOtherDefinition()
+    public static function getOtherDefinition(): OtherInteractionDefinition
     {
         return new OtherInteractionDefinition();
     }
 
-    public static function getOtherWithCorrectResponsesPatternDefinition()
+    public static function getOtherWithCorrectResponsesPatternDefinition(): OtherInteractionDefinition
     {
-        $otherDefinition = new OtherInteractionDefinition();
-        $otherDefinition = $otherDefinition->withCorrectResponsesPattern(array('test'));
-
-        return $otherDefinition;
+        return new OtherInteractionDefinition()->withCorrectResponsesPattern(['test']);
     }
 
-    public static function getChoiceDefinition()
+    public static function getChoiceDefinition(): ChoiceInteractionDefinition
     {
-        $choiceDefinition = new ChoiceInteractionDefinition();
-        $choiceDefinition = $choiceDefinition->withChoices(array(InteractionComponentFixtures::getTypicalInteractionComponent()));
-
-        return $choiceDefinition;
+        return new ChoiceInteractionDefinition()->withChoices([InteractionComponentFixtures::getTypicalInteractionComponent()]);
     }
 
-    public static function getSequencingDefinition()
+    public static function getSequencingDefinition(): SequencingInteractionDefinition
     {
-        $sequencingDefinition = new SequencingInteractionDefinition();
-        $sequencingDefinition = $sequencingDefinition->withChoices(array(InteractionComponentFixtures::getTypicalInteractionComponent()));
-
-        return $sequencingDefinition;
+        return new SequencingInteractionDefinition()->withChoices([InteractionComponentFixtures::getTypicalInteractionComponent()]);
     }
 
-    public static function getLikertDefinition()
+    public static function getLikertDefinition(): LikertInteractionDefinition
     {
-        $likertDefinition = new LikertInteractionDefinition();
-        $likertDefinition = $likertDefinition->withScale(array(InteractionComponentFixtures::getTypicalInteractionComponent()));
-
-        return $likertDefinition;
+        return new LikertInteractionDefinition()->withScale([InteractionComponentFixtures::getTypicalInteractionComponent()]);
     }
 
-    public static function getMatchingDefinition()
+    public static function getMatchingDefinition(): MatchingInteractionDefinition
     {
         $matchingDefinition = new MatchingInteractionDefinition();
-        $matchingDefinition = $matchingDefinition->withSource(array(InteractionComponentFixtures::getTypicalInteractionComponent()));
-        $matchingDefinition = $matchingDefinition->withTarget(array(InteractionComponentFixtures::getTypicalInteractionComponent()));
+        $matchingDefinition = $matchingDefinition->withSource([InteractionComponentFixtures::getTypicalInteractionComponent()]);
 
-        return $matchingDefinition;
+        return $matchingDefinition->withTarget([InteractionComponentFixtures::getTypicalInteractionComponent()]);
     }
 
-    public static function getPerformanceDefinition()
+    public static function getPerformanceDefinition(): PerformanceInteractionDefinition
     {
-        $performanceDefinition = new PerformanceInteractionDefinition();
-        $performanceDefinition = $performanceDefinition->withSteps(array(InteractionComponentFixtures::getTypicalInteractionComponent()));
-
-        return $performanceDefinition;
+        return new PerformanceInteractionDefinition()->withSteps([InteractionComponentFixtures::getTypicalInteractionComponent()]);
     }
 
-    public static function getForQueryDefinition()
+    public static function getForQueryDefinition(): Definition
     {
-        return new Definition(LanguageMap::create(array('en-US' => 'for query')));
+        return new Definition(LanguageMap::create(['en-US' => 'for query']));
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Xabbuh\XApi\DataFixtures;
 
+use SplObjectStorage;
 use Xabbuh\XApi\Model\Extensions;
 use Xabbuh\XApi\Model\IRI;
 
@@ -13,46 +14,46 @@ use Xabbuh\XApi\Model\IRI;
  */
 class ExtensionsFixtures
 {
-    public static function getEmptyExtensions()
+    public static function getEmptyExtensions(): Extensions
     {
         return new Extensions();
     }
 
-    public static function getTypicalExtensions()
+    public static function getTypicalExtensions(): Extensions
     {
-        $extensions = new \SplObjectStorage();
+        $extensions = new SplObjectStorage();
         $extensions->attach(IRI::fromString('http://id.tincanapi.com/extension/topic'), 'Conformance Testing');
 
         return new Extensions($extensions);
     }
 
-    public static function getWithObjectValueExtensions()
+    public static function getWithObjectValueExtensions(): Extensions
     {
-        $extensions = new \SplObjectStorage();
-        $extensions->attach(IRI::fromString('http://id.tincanapi.com/extension/color'), array(
+        $extensions = new SplObjectStorage();
+        $extensions->attach(IRI::fromString('http://id.tincanapi.com/extension/color'), [
             'model' => 'RGB',
             'value' => '#FFFFFF',
-        ));
+        ]);
 
         return new Extensions($extensions);
     }
 
-    public static function getWithIntegerValueExtensions()
+    public static function getWithIntegerValueExtensions(): Extensions
     {
-        $extensions = new \SplObjectStorage();
+        $extensions = new SplObjectStorage();
         $extensions->attach(IRI::fromString('http://id.tincanapi.com/extension/starting-position'), 1);
 
         return new Extensions($extensions);
     }
 
-    public static function getMultiplePairsExtensions()
+    public static function getMultiplePairsExtensions(): Extensions
     {
-        $extensions = new \SplObjectStorage();
+        $extensions = new SplObjectStorage();
         $extensions->attach(IRI::fromString('http://id.tincanapi.com/extension/topic'), 'Conformance Testing');
-        $extensions->attach(IRI::fromString('http://id.tincanapi.com/extension/color'), array(
+        $extensions->attach(IRI::fromString('http://id.tincanapi.com/extension/color'), [
             'model' => 'RGB',
             'value' => '#FFFFFF',
-        ));
+        ]);
         $extensions->attach(IRI::fromString('http://id.tincanapi.com/extension/starting-position'), 1);
 
         return new Extensions($extensions);
