@@ -21,172 +21,172 @@ use Xabbuh\XApi\Model\Result;
  */
 class ResultFixtures
 {
-    public static function getEmptyResult()
+    public static function getEmptyResult(): Result
     {
         return new Result();
     }
 
-    public static function getTypicalResult()
+    public static function getTypicalResult(): Result
     {
         return new Result();
     }
 
-    public static function getScoreResult()
+    public static function getScoreResult(): Result
     {
         return new Result(ScoreFixtures::getTypicalScore());
     }
 
-    public static function getEmptyScoreResult()
+    public static function getEmptyScoreResult(): Result
     {
         return new Result(ScoreFixtures::getEmptyScore());
     }
 
-    public static function getSuccessResult()
+    public static function getSuccessResult(): Result
     {
         return new Result(null, true);
     }
 
-    public static function getCompletionResult()
+    public static function getCompletionResult(): Result
     {
         return new Result(null, null, true);
     }
 
-    public static function getResponseResult()
+    public static function getResponseResult(): Result
     {
         return new Result(null, null, null, 'test');
     }
 
-    public static function getDurationResult()
+    public static function getDurationResult(): Result
     {
         return new Result(null, null, null, null, 'PT2H');
     }
 
-    public static function getExtensionsResult()
+    public static function getExtensionsResult(): Result
     {
         return new Result(null, null, null, null, null, ExtensionsFixtures::getMultiplePairsExtensions());
     }
 
-    public static function getEmptyExtensionsResult()
+    public static function getEmptyExtensionsResult(): Result
     {
         return new Result(null, null, null, null, null, ExtensionsFixtures::getEmptyExtensions());
     }
 
-    public static function getScoreAndSuccessResult()
+    public static function getScoreAndSuccessResult(): Result
     {
         return new Result(ScoreFixtures::getTypicalScore(), true);
     }
 
-    public static function getScoreAndCompletionResult()
+    public static function getScoreAndCompletionResult(): Result
     {
         return new Result(ScoreFixtures::getTypicalScore(), null, true);
     }
 
-    public static function getScoreAndResponseResult()
+    public static function getScoreAndResponseResult(): Result
     {
         return new Result(ScoreFixtures::getTypicalScore(), null, null, 'test');
     }
 
-    public static function getScoreAndDurationResult()
+    public static function getScoreAndDurationResult(): Result
     {
         return new Result(ScoreFixtures::getTypicalScore(), null, null, null, 'PT2H');
     }
 
-    public static function getSuccessAndCompletionResult()
+    public static function getSuccessAndCompletionResult(): Result
     {
         return new Result(null, true, true);
     }
 
-    public static function getSuccessAndResponseResult()
+    public static function getSuccessAndResponseResult(): Result
     {
         return new Result(null, true, null, 'test');
     }
 
-    public static function getSuccessAndDurationResult()
+    public static function getSuccessAndDurationResult(): Result
     {
         return new Result(null, true, null, null, 'PT2H');
     }
 
-    public static function getCompletionAndResponseResult()
+    public static function getCompletionAndResponseResult(): Result
     {
         return new Result(null, null, true, 'test');
     }
 
-    public static function getCompletionAndDurationResult()
+    public static function getCompletionAndDurationResult(): Result
     {
         return new Result(null, null, true, null, 'PT2H');
     }
 
-    public static function getResponseAndDurationResult()
+    public static function getResponseAndDurationResult(): Result
     {
         return new Result(null, null, null, 'test', 'PT2H');
     }
 
-    public static function getScoreSuccessAndCompletionResult()
+    public static function getScoreSuccessAndCompletionResult(): Result
     {
         return new Result(ScoreFixtures::getTypicalScore(), true, true);
     }
 
-    public static function getScoreSuccessAndResponseResult()
+    public static function getScoreSuccessAndResponseResult(): Result
     {
         return new Result(ScoreFixtures::getTypicalScore(), true, null, 'test');
     }
 
-    public static function getScoreSuccessAndDurationResult()
+    public static function getScoreSuccessAndDurationResult(): Result
     {
         return new Result(ScoreFixtures::getTypicalScore(), true, null, null, 'PT2H');
     }
 
-    public static function getScoreCompletionAndResponseResult()
+    public static function getScoreCompletionAndResponseResult(): Result
     {
         return new Result(ScoreFixtures::getTypicalScore(), null, true, 'test');
     }
 
-    public static function getScoreCompletionAndDurationResult()
+    public static function getScoreCompletionAndDurationResult(): Result
     {
         return new Result(ScoreFixtures::getTypicalScore(), null, true, null, 'PT2H');
     }
 
-    public static function getScoreResponseAndDurationResult()
+    public static function getScoreResponseAndDurationResult(): Result
     {
         return new Result(ScoreFixtures::getTypicalScore(), null, null, 'test', 'PT2H');
     }
 
-    public static function getSuccessCompletionAndResponseResult()
+    public static function getSuccessCompletionAndResponseResult(): Result
     {
         return new Result(null, true, true, 'test');
     }
 
-    public static function getSuccessCompletionAndDurationResult()
+    public static function getSuccessCompletionAndDurationResult(): Result
     {
         return new Result(null, true, true, null, 'PT2H');
     }
 
-    public static function getSuccessResponseAndDurationResult()
+    public static function getSuccessResponseAndDurationResult(): Result
     {
         return new Result(null, true, null, 'test', 'PT2H');
     }
 
-    public static function getCompletionResponseAndDurationResult()
+    public static function getCompletionResponseAndDurationResult(): Result
     {
         return new Result(null, null, true, 'test', 'PT2H');
     }
 
-    public static function getScoreSuccessCompletionAndResponseResult()
+    public static function getScoreSuccessCompletionAndResponseResult(): Result
     {
         return new Result(ScoreFixtures::getTypicalScore(), true, true, 'test');
     }
 
-    public static function getScoreSuccessCompletionAndDurationResult()
+    public static function getScoreSuccessCompletionAndDurationResult(): Result
     {
         return new Result(ScoreFixtures::getTypicalScore(), true, true, null, 'PT2H');
     }
 
-    public static function getSuccessCompletionResponseAndDurationResult()
+    public static function getSuccessCompletionResponseAndDurationResult(): Result
     {
         return new Result(null, true, true, 'test', 'PT2H');
     }
 
-    public static function getAllPropertiesResult()
+    public static function getAllPropertiesResult(): Result
     {
         return new Result(ScoreFixtures::getTypicalScore(), true, true, 'test', 'PT2H', ExtensionsFixtures::getTypicalExtensions());
     }

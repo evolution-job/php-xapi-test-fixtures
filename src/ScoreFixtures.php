@@ -21,82 +21,82 @@ use Xabbuh\XApi\Model\Score;
  */
 class ScoreFixtures
 {
-    public static function getEmptyScore()
+    public static function getEmptyScore(): Score
     {
         return new Score();
     }
 
-    public static function getTypicalScore()
+    public static function getTypicalScore(): Score
     {
         return new Score(1);
     }
 
-    public static function getScaledScore()
+    public static function getScaledScore(): Score
     {
         return new Score(1);
     }
 
-    public static function getRawScore()
+    public static function getRawScore(): Score
     {
         return new Score(null, 100);
     }
 
-    public static function getMinScore()
+    public static function getMinScore(): Score
     {
         return new Score(null, null, 0);
     }
 
-    public static function getMaxScore()
+    public static function getMaxScore(): Score
     {
         return new Score(null, null, null, 100);
     }
 
-    public static function getScaledAndRawScore()
+    public static function getScaledAndRawScore(): Score
     {
         return new Score(1, 100);
     }
 
-    public static function getScaledAndMinScore()
+    public static function getScaledAndMinScore(): Score
     {
         return new Score(1, null, 0);
     }
 
-    public static function getScaledAndMaxScore()
+    public static function getScaledAndMaxScore(): Score
     {
         return new Score(1, null, null, 100);
     }
 
-    public static function getRawAndMinScore()
+    public static function getRawAndMinScore(): Score
     {
         return new Score(null, 100, 0);
     }
 
-    public static function getRawAndMaxScore()
+    public static function getRawAndMaxScore(): Score
     {
         return new Score(null, 100, null, 100);
     }
 
-    public static function getMinAndMaxScore()
+    public static function getMinAndMaxScore(): Score
     {
         return new Score(null, null, 0, 100);
     }
 
-    public static function getScaledRawAndMinScore()
+    public static function getScaledRawAndMinScore(): Score
     {
         return new Score(1, 100, 0);
     }
 
-    public static function getScaledRawAndMaxScore()
+    public static function getScaledRawAndMaxScore(): Score
     {
         return new Score(1, 100, null, 100);
     }
 
-    public static function getRawMinAndMaxScore()
+    public static function getRawMinAndMaxScore(): Score
     {
         return new Score(null, 100, 0, 100);
     }
 
-    public static function getAllPropertiesScore()
+    public static function getAllPropertiesScore(): Score
     {
         return new Score(1, 100, 0, 100);
     }

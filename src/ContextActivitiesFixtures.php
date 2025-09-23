@@ -21,56 +21,48 @@ use Xabbuh\XApi\Model\ContextActivities;
  */
 class ContextActivitiesFixtures
 {
-    public static function getEmptyContextActivities()
+    public static function getEmptyContextActivities(): ContextActivities
     {
         return new ContextActivities();
     }
 
-    public static function getTypicalContextActivities()
+    public static function getTypicalContextActivities(): ContextActivities
     {
         return new ContextActivities();
     }
 
-    public static function getCategoryOnlyContextActivities()
+    public static function getCategoryOnlyContextActivities(): ContextActivities
     {
-        $contextActivities = new ContextActivities();
-
-        return $contextActivities->withAddedCategoryActivity(ActivityFixtures::getTypicalActivity());
+        return new ContextActivities()->withAddedCategoryActivity(ActivityFixtures::getTypicalActivity());
     }
 
-    public static function getParentOnlyContextActivities()
+    public static function getParentOnlyContextActivities(): ContextActivities
     {
-        $contextActivities = new ContextActivities();
-
-        return $contextActivities->withAddedParentActivity(ActivityFixtures::getTypicalActivity());
+        return new ContextActivities()->withAddedParentActivity(ActivityFixtures::getTypicalActivity());
     }
 
-    public static function getGroupingOnlyContextActivities()
+    public static function getGroupingOnlyContextActivities(): ContextActivities
     {
-        $contextActivities = new ContextActivities();
-
-        return $contextActivities->withAddedGroupingActivity(ActivityFixtures::getTypicalActivity());
+        return new ContextActivities()->withAddedGroupingActivity(ActivityFixtures::getTypicalActivity());
     }
 
-    public static function getOtherOnlyContextActivities()
+    public static function getOtherOnlyContextActivities(): ContextActivities
     {
-        $contextActivities = new ContextActivities();
-
-        return $contextActivities->withAddedOtherActivity(ActivityFixtures::getTypicalActivity());
+        return new ContextActivities()->withAddedOtherActivity(ActivityFixtures::getTypicalActivity());
     }
 
-    public static function getAllPropertiesEmptyActivities()
+    public static function getAllPropertiesEmptyActivities(): ContextActivities
     {
-        return new ContextActivities(array(), array(), array(), array());
+        return new ContextActivities([], [], [], []);
     }
 
-    public static function getAllPropertiesActivities()
+    public static function getAllPropertiesActivities(): ContextActivities
     {
         return new ContextActivities(
-            array(ActivityFixtures::getTypicalActivity()),
-            array(ActivityFixtures::getTypicalActivity()),
-            array(ActivityFixtures::getTypicalActivity()),
-            array(ActivityFixtures::getTypicalActivity())
+            [ActivityFixtures::getTypicalActivity()],
+            [ActivityFixtures::getTypicalActivity()],
+            [ActivityFixtures::getTypicalActivity()],
+            [ActivityFixtures::getTypicalActivity()]
         );
     }
 }

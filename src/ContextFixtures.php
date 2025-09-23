@@ -21,114 +21,78 @@ use Xabbuh\XApi\Model\Context;
  */
 class ContextFixtures
 {
-    public static function getEmptyContext()
+    public static function getEmptyContext(): Context
     {
         return new Context();
     }
 
-    public static function getTypicalContext()
+    public static function getTypicalContext(): Context
     {
         return new Context();
     }
 
-    public static function getTypicalAgentInstructorContext()
+    public static function getTypicalAgentInstructorContext(): Context
     {
-        $context = new Context();
-
-        return $context->withInstructor(ActorFixtures::getTypicalAgent());
+        return new Context()->withInstructor(ActorFixtures::getTypicalAgent());
     }
 
-    public static function getMboxAgentInstructorContext()
+    public static function getMboxAgentInstructorContext(): Context
     {
-        $context = new Context();
-
-        return $context->withInstructor(ActorFixtures::getMboxAgent());
+        return new Context()->withInstructor(ActorFixtures::getMboxAgent());
     }
 
-    public static function getMboxSha1SumAgentInstructorContext()
+    public static function getMboxSha1SumAgentInstructorContext(): Context
     {
-        $context = new Context();
-
-        return $context->withInstructor(ActorFixtures::getMboxSha1SumAgent());
+        return new Context()->withInstructor(ActorFixtures::getMboxSha1SumAgent());
     }
 
-    public static function getOpenIdAgentInstructorContext()
+    public static function getOpenIdAgentInstructorContext(): Context
     {
-        $context = new Context();
-
-        return $context->withInstructor(ActorFixtures::getOpenIdAgent());
+        return new Context()->withInstructor(ActorFixtures::getOpenIdAgent());
     }
 
-    public static function getAccountAgentInstructorContext()
+    public static function getAccountAgentInstructorContext(): Context
     {
-        $context = new Context();
-
-        return $context->withInstructor(ActorFixtures::getAccountAgent());
+        return new Context()->withInstructor(ActorFixtures::getAccountAgent());
     }
 
-    public static function getTypicalGroupTeamContext()
+    public static function getTypicalGroupTeamContext(): Context
     {
-        $context = new Context();
-
-        return $context->withTeam(ActorFixtures::getTypicalGroup());
+        return new Context()->withTeam(ActorFixtures::getTypicalGroup());
     }
 
-    public static function getStatementOnlyContext()
+    public static function getStatementOnlyContext(): Context
     {
-        $context = new Context();
-
-        return $context->withStatement(StatementReferenceFixtures::getTypicalStatementReference());
+        return new Context()->withStatement(StatementReferenceFixtures::getTypicalStatementReference());
     }
 
-    public static function getExtensionsOnlyContext()
+    public static function getExtensionsOnlyContext(): Context
     {
-        $context = new Context();
-
-        return $context->withExtensions(ExtensionsFixtures::getTypicalExtensions());
+        return new Context()->withExtensions(ExtensionsFixtures::getTypicalExtensions());
     }
 
-    public static function getEmptyExtensionsOnlyContext()
+    public static function getEmptyExtensionsOnlyContext(): Context
     {
-        $context = new Context();
-
-        return $context->withExtensions(ExtensionsFixtures::getEmptyExtensions());
+        return new Context()->withExtensions(ExtensionsFixtures::getEmptyExtensions());
     }
 
-    public static function getEmptyContextActivitiesContext()
+    public static function getEmptyContextActivitiesContext(): Context
     {
-        $context = new Context();
-
-        return $context->withContextActivities(ContextActivitiesFixtures::getEmptyContextActivities());
+        return new Context()->withContextActivities(ContextActivitiesFixtures::getEmptyContextActivities());
     }
 
-    public static function getEmptyContextActivitiesAllPropertiesEmptyContext()
+    public static function getEmptyContextActivitiesAllPropertiesEmptyContext(): Context
     {
-        $context = new Context();
-
-        return $context->withContextActivities(ContextActivitiesFixtures::getAllPropertiesEmptyActivities());
+        return new Context()->withContextActivities(ContextActivitiesFixtures::getAllPropertiesEmptyActivities());
     }
 
-    public static function getContextActivitiesAllPropertiesOnlyContext()
+    public static function getContextActivitiesAllPropertiesOnlyContext(): Context
     {
-        $context = new Context();
-
-        return $context->withContextActivities(ContextActivitiesFixtures::getAllPropertiesActivities());
+        return new Context()->withContextActivities(ContextActivitiesFixtures::getAllPropertiesActivities());
     }
 
-    public static function getAllPropertiesContext()
+    public static function getAllPropertiesContext(): Context
     {
-        $context = new Context();
-        $context = $context->withRegistration('16fd2706-8baf-433b-82eb-8c7fada847da')
-            ->withInstructor(ActorFixtures::getTypicalAgent())
-            ->withTeam(ActorFixtures::getTypicalGroup())
-            ->withContextActivities(ContextActivitiesFixtures::getAllPropertiesActivities())
-            ->withRevision('test')
-            ->withPlatform('test')
-            ->withLanguage('en-US')
-            ->withStatement(StatementReferenceFixtures::getTypicalStatementReference())
-            ->withExtensions(ExtensionsFixtures::getTypicalExtensions())
-        ;
-
-        return $context;
+        return new Context()->withRegistration('16fd2706-8baf-433b-82eb-8c7fada847da')->withInstructor(ActorFixtures::getTypicalAgent())->withTeam(ActorFixtures::getTypicalGroup())->withContextActivities(ContextActivitiesFixtures::getAllPropertiesActivities())->withRevision('test')->withPlatform('test')->withLanguage('en-US')->withStatement(StatementReferenceFixtures::getTypicalStatementReference())->withExtensions(ExtensionsFixtures::getTypicalExtensions());
     }
 }
