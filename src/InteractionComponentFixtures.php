@@ -22,18 +22,18 @@ use Xabbuh\XApi\Model\LanguageMap;
  */
 class InteractionComponentFixtures
 {
-    public static function getTypicalInteractionComponent()
+    public static function getTypicalInteractionComponent(): InteractionComponent
     {
         return new InteractionComponent('test');
     }
 
-    public static function getIdOnlyInteractionComponent()
+    public static function getIdOnlyInteractionComponent(): InteractionComponent
     {
         return new InteractionComponent('test');
     }
 
-    public static function getAllPropertiesInteractionComponent()
+    public static function getAllPropertiesInteractionComponent(): InteractionComponent
     {
-        return new InteractionComponent('test', LanguageMap::create(array('en-US' => 'test')));
+        return new InteractionComponent('test', LanguageMap::create(['en-US' => 'test']));
     }
 }

@@ -22,27 +22,27 @@ use Xabbuh\XApi\Model\IRI;
  */
 class ActivityFixtures
 {
-    public static function getTypicalActivity()
+    public static function getTypicalActivity(): Activity
     {
         return new Activity(IRI::fromString('http://tincanapi.com/conformancetest/activityid'));
     }
 
-    public static function getIdActivity()
+    public static function getIdActivity(): Activity
     {
         return new Activity(IRI::fromString('http://tincanapi.com/conformancetest/activityid'));
     }
 
-    public static function getIdAndDefinitionActivity()
+    public static function getIdAndDefinitionActivity(): Activity
     {
         return new Activity(IRI::fromString('http://tincanapi.com/conformancetest/activityid'), DefinitionFixtures::getTypicalDefinition());
     }
 
-    public static function getAllPropertiesActivity()
+    public static function getAllPropertiesActivity(): Activity
     {
         return new Activity(IRI::fromString('http://tincanapi.com/conformancetest/activityid'), DefinitionFixtures::getTypicalDefinition());
     }
 
-    public static function getForQueryActivity()
+    public static function getForQueryActivity(): Activity
     {
         return new Activity(IRI::fromString('http://tincanapi.com/conformancetest/activityid/forQuery'), DefinitionFixtures::getForQueryDefinition());
     }

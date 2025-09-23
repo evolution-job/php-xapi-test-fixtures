@@ -31,15 +31,14 @@ class StatementResultFixtures
     /**
      * Loads a statement result.
      *
-     * @param IRL $urlPath An optional URL path refering to more results
-     *
+     * @param IRL|null $urlPath An optional URL path referring to more results
      * @return StatementResult
      */
-    public static function getStatementResult(IRL $urlPath = null)
+    public static function getStatementResult(?IRL $urlPath = null): StatementResult
     {
         $statement1 = StatementFixtures::getMinimalStatement();
 
-        $verb = new Verb(IRI::fromString('http://adlnet.gov/expapi/verbs/deleted'), LanguageMap::create(array('en-US' => 'deleted')));
+        $verb = new Verb(IRI::fromString('http://adlnet.gov/expapi/verbs/deleted'), LanguageMap::create(['en-US' => 'deleted']));
         $statement2 = new Statement(
             StatementId::fromString('12345678-1234-5678-8234-567812345679'),
             new Agent(InverseFunctionalIdentifier::withMbox(IRI::fromString('mailto:bob@example.com'))),
@@ -47,9 +46,7 @@ class StatementResultFixtures
             $statement1->getObject()
         );
 
-        $statementResult = new StatementResult(array($statement1, $statement2), $urlPath);
-
-        return $statementResult;
+        return new StatementResult([$statement1, $statement2], $urlPath);
     }
 
     /**
@@ -57,10 +54,8 @@ class StatementResultFixtures
      *
      * @return StatementResult
      */
-    public static function getStatementResultWithMore()
+    public static function getStatementResultWithMore(): StatementResult
     {
-        $statementResult = static::getStatementResult(IRL::fromString('/xapi/statements/more/b381d8eca64a61a42c7b9b4ecc2fabb6'));
-
-        return $statementResult;
+        return static::getStatementResult(IRL::fromString('/xapi/statements/more/b381d8eca64a61a42c7b9b4ecc2fabb6'));
     }
 }
