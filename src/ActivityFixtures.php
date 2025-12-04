@@ -15,7 +15,7 @@ use Xabbuh\XApi\Model\Activity;
 use Xabbuh\XApi\Model\IRI;
 
 /**
- * xAPI statement activity fixtures.
+ * xAPI activity fixtures.
  *
  * These fixtures are borrowed from the
  * {@link https://github.com/adlnet/xAPI_LRS_Test Experience API Learning Record Store Conformance Test} package.

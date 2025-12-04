@@ -22,7 +22,7 @@ use Xabbuh\XApi\Model\StatementResult;
 use Xabbuh\XApi\Model\Verb;
 
 /**
- * Statement result fixtures.
+ * xAPI Statement result fixtures.
  *
  * @author Christian Flothmann <christian.flothmann@xabbuh.de>
  */

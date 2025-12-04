@@ -24,7 +24,7 @@ use Xabbuh\XApi\Model\State;
 use Xabbuh\XApi\Model\StateDocument;
 
 /**
- * Document fixtures.
+ * xAPI Document fixtures.
  *
  * @author Christian Flothmann <christian.flothmann@xabbuh.de>
  */

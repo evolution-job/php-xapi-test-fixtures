@@ -17,7 +17,7 @@ use Xabbuh\XApi\Model\IRL;
 use Xabbuh\XApi\Model\LanguageMap;
 
 /**
- * xAPI statement attachment fixtures.
+ * xAPI attachment fixtures.
  *
  * These fixtures are borrowed from the
  * {@link https://github.com/adlnet/xAPI_LRS_Test Experience API Learning Record Store Conformance Test} package.
